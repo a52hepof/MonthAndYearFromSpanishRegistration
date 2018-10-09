@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MonthAndYearFromSpanishRegistration
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            var strRegNumber = "4252JNZ"; 
+            // JNZ should be 2016 / May
+            var age = SpanishRegistrationAge.NearestMonth(strRegNumber);
+            Console.WriteLine(age.year + "/" + age.month);
         }
     }
 }
